@@ -1,25 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import { Fragment } from 'react';
+import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
+import { Menu } from 'semantic-ui-react';
+import PartieUN from './Composants/PartieUN';
+import Accueil from './Composants/Accueil';
+import PartieDEUX from './Composants/PartieDEUX';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Fragment>
+      <BrowserRouter>
+        <h5>excercices</h5>
+        <Menu>
+          <Menu.Item as={NavLink} to="/">accueil</Menu.Item>
+          <Menu.Item as={NavLink} to="/p1">Parti 1</Menu.Item>
+          <Menu.Item as={NavLink} to="/p2">Parti 2</Menu.Item>
+          
+        </Menu>
+        <Routes>
+          <Route path="/" element={<Accueil />} ></Route>
+          <Route path="/p1" element={<PartieUN />} />
+          <Route path="/p2" element={<PartieDEUX />} />
+        </Routes>
+      </BrowserRouter>
+    </Fragment>
+  )
 }
 
 export default App;
