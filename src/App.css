@@ -1,9 +1,13 @@
 .App {
   text-align: center;
+  color: antiquewhite;
+  
 }
 
 body{
-  background-color: rgb(255, 255, 250);
+  background: radial-gradient( hsl(214, 47%, 23%),
+  hsl(237, 49%, 15%))
+  
 }
 .App-logo {
   height: 40vmin;

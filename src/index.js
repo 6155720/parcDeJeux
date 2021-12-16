@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Game from './Composants/Game';
 
 ReactDOM.render(
     <App />
+    
   ,
   document.getElementById('root')
 );
